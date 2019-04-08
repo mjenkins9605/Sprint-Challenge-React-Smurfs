@@ -15,7 +15,7 @@ addSmurf = event => {
   event.preventDefault();
   // add code to create the smurf using the api
   axios
-  .post("http://localhost:3333/smurfs", this.state)
+  .post("http://localhost:3333=/smurfs", this.state)
   .then(response => {
     this.setState({ smurfs: response.data })
   })
@@ -32,8 +32,8 @@ changeHandler = event => {
     [event.target.name]: event.target.value });
 };
 
-handleInputChange = e => {
-  this.setState({ [e.target.name]: e.target.value });
+handleInputChange = event => {
+  this.setState({ [event.target.name]: event.target.value });
 };
 
 

@@ -1,15 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import './App.css';
-import SmurfForm from './components/SmurfForm';
-import Smurfs from './components/Smurfs';
+import "./App.css";
+import SmurfForm from "./components/SmurfForm";
+import Smurfs from "./components/Smurfs";
 import axios from "axios";
+import { Route, NavLink } from "react-router-dom";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      smurfs: [],
+      smurfs: []
     };
   }
   // add any needed code to ensure that the smurfs collection exists on state and it has data coming from the server
@@ -28,8 +29,18 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SmurfForm addSmurf={this.addSmurf}/>
-        <Smurfs smurfs={this.state.smurfs} />
+        <NavLink exact to="/">Home</NavLink>
+        <br />
+        <NavLink to="/smurf-form">Add Smurf</NavLink>
+
+        <Route
+          path="/smurf-form"
+          render={() => <SmurfForm addSmurf={this.addSmurf} />}
+        />
+        <Route 
+          path="/" 
+          render={() => <Smurfs smurfs={this.state.smurfs} />} 
+        />
       </div>
     );
   }
