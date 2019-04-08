@@ -30,8 +30,27 @@ In this challenge, you will create a Single Page Application complete with Clien
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Explain the differences between `client-side routing` and `server-side routing`.
+
+Server side is when a link is clicked it will request a new page from the server. Client side prevents a server request when a link is clicked but a change in view due to being preloaded.
+
 - [ ] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+
+C - Create
+R - Read
+U - Update
+D - Delete
+
+GET
+POST
+PUT
+DELETE
+
 - [ ] Mention three tools we can use to make AJAX requests.
+
+GET
+POST
+DELETE
+
 
 
 ## Project Set Up
